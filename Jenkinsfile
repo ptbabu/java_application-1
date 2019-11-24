@@ -1,7 +1,7 @@
 pipeline {
    agent any
    parameters {
-        choice(choices: ['dev', 'prod'], description: 'What AWS region?', name: 'region')
+        choice(choices: ['dev','stage','prod'], description: 'What environment?', name: 'env')
     }
    
    stages {
