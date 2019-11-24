@@ -11,7 +11,7 @@ pipeline {
                 echo 'Building..'
                  sh 'mvn package'
                  script {
-              timeout(time: 10, unit: 'MINUTES') {
+              timeout(time: 1, unit: 'MINUTES') {
                 input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
               }
             }
